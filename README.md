@@ -1,1 +1,1 @@
-1. Singly LinkLists - singly_list.py
+1. Singly Linked Lists - singly_list.py
