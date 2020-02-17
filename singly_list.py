@@ -154,23 +154,3 @@ class Linkedlist():
         while curr_node:
             print curr_node.val, "->",
             curr_node = curr_node.next
-
-llist = Linkedlist()
-llist.append('a')
-llist.append('b')
-llist.append('c')
-#llist.append('d')
-#llist.append('e')
-#llist.append('f')
-#llist.append('g')
-#llist.append('h')
-#llist.append('i')
-llist.print_list()
-print("\n")
-#llist.node_swap('a','f')
-#llist.reverse_list_iterative()
-llist.reverse_list_recursive()
-#llist.insert('f','z')
-#llist.prepend('f')
-#llist.delete('a')
-llist.print_list()
