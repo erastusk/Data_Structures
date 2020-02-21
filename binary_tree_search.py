@@ -64,24 +64,3 @@ class BinaryTree():
             traverse = self.print_order(curr_node.left, traverse)
             traverse = self.print_order(curr_node.right, traverse)
         return traverse   
-
-
-tree = BinaryTree(8)
-tree.root.left = Node(3)
-tree.root.left.right = Node(6)
-tree.root.left.left = Node(1)
-tree.root.right = Node(10)
-tree.root.right.left = Node(9)
-tree.root.right.right = Node(11)
-tree.print_preorder()
-print(tree.search_BTS(-1))
-tree.insert_BTS(80)
-tree.print_preorder()
-tree.insert_BTS(7)
-
-#tree.print_preorder()
-#tree.insert_BTS(8)
-#tree.print_preorder()
-#tree.insert_BTS(6)
-#tree.print_preorder()
-
