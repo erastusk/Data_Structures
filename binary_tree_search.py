@@ -6,6 +6,7 @@ class Node():
         self.data = data
         self.left = None
         self.right = None
+        
 class BinaryTree():
     """ Binary Tree definition """
     def __init__(self, data):
@@ -13,6 +14,7 @@ class BinaryTree():
         self.pre = ""
         self.ino = ""
         self.post = ""
+        
     def search_BTS(self, data):
         """Search Function"""
         root_node = self.root
@@ -20,6 +22,7 @@ class BinaryTree():
             """ if greater then root right else left"""
             return self.search(data, root_node, "right")
         return self.search(data, root_node, "left")
+    
     def search(self, data, root_node, direction):
         """Search Helper Function"""
         if direction == "right":
@@ -35,6 +38,7 @@ class BinaryTree():
                 return True
             return self.search(data, root_node.left, "left")
         return False
+    
     def insert_BTS(self, data):
         """ Insert node """
         insert_node = Node(data)
@@ -42,6 +46,7 @@ class BinaryTree():
             self.root = insert_node
             return
         self.insert_(insert_node, self.root)
+        
     def insert_(self, insert_node, root_node):
         """ recursion insert method """
         if root_node.right is None:
@@ -54,9 +59,11 @@ class BinaryTree():
             return self.insert_(insert_node, root_node.right)
         elif insert_node.data < root_node.data:
             return self.insert_(insert_node, root_node.left)
+        
     def print_preorder(self):
         """Print Binary Tree using Preorder traversal"""
         print(self.print_order(self.root, ""))
+        
     def print_order(self, curr_node, traverse):
         """Print helper function"""
         if curr_node:
